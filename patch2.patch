@@ -1,0 +1,43 @@
+Index: src/qemu/qemu_capabilities.c
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/qemu/qemu_capabilities.c b/src/qemu/qemu_capabilities.c
+--- a/src/qemu/qemu_capabilities.c  (revision 750e2401955e422454d5fd5d94f2ba10e929fa8b)
++++ b/src/qemu/qemu_capabilities.c  (date 1636115138399)
+@@ -913,7 +913,7 @@
+     /* RHEL doesn't follow the usual naming for QEMU binaries and ships
+      * a single binary named qemu-kvm outside of $PATH instead */
+     if (virQEMUCapsGuestIsNative(hostarch, guestarch) && !binary)
+-        binary = g_strdup("/usr/libexec/qemu-kvm");
++        binary = g_strdup("/opt/homebrew/bin/qemu-kvm");
+ 
+     return binary;
+ }
+Index: tests/cputestdata/cpu-data.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/cputestdata/cpu-data.py b/tests/cputestdata/cpu-data.py
+--- a/tests/cputestdata/cpu-data.py (revision 750e2401955e422454d5fd5d94f2ba10e929fa8b)
++++ b/tests/cputestdata/cpu-data.py (date 1636115125447)
+@@ -513,7 +513,7 @@
+         metavar="PATH",
+         help="Path to qemu. "
+         "If unset, will try '/usr/bin/qemu-system-x86_64', "
+-        "'/usr/bin/qemu-kvm', and '/usr/libexec/qemu-kvm'.")
++        "'/usr/bin/qemu-kvm', and '/opt/homebrew/bin/qemu-kvm'.")
+     subparsers = parser.add_subparsers(dest="action")
+     subparsers.add_parser(
+         "gather",
+@@ -545,7 +545,7 @@
+         search = [
+             "/usr/bin/qemu-system-x86_64",
+             "/usr/bin/qemu-kvm",
+-            "/usr/libexec/qemu-kvm"]
++            "/opt/homebrew/bin/qemu-kvm"]
+         for f in search:
+             if os.path.isfile(f):
+                 args.path_to_qemu = f
