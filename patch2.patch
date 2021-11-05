@@ -1,8 +1,3 @@
-Index: src/qemu/qemu_capabilities.c
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/src/qemu/qemu_capabilities.c b/src/qemu/qemu_capabilities.c
 --- a/src/qemu/qemu_capabilities.c  (revision 750e2401955e422454d5fd5d94f2ba10e929fa8b)
 +++ b/src/qemu/qemu_capabilities.c  (date 1636115138399)
@@ -15,11 +10,6 @@ diff --git a/src/qemu/qemu_capabilities.c b/src/qemu/qemu_capabilities.c
  
      return binary;
  }
-Index: tests/cputestdata/cpu-data.py
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
 diff --git a/tests/cputestdata/cpu-data.py b/tests/cputestdata/cpu-data.py
 --- a/tests/cputestdata/cpu-data.py (revision 750e2401955e422454d5fd5d94f2ba10e929fa8b)
 +++ b/tests/cputestdata/cpu-data.py (date 1636115125447)
