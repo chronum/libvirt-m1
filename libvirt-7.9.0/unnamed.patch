@@ -1,0 +1,23 @@
+Index: src/qemu/qemu_capabilities.c
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/qemu/qemu_capabilities.c b/src/qemu/qemu_capabilities.c
+--- a/src/qemu/qemu_capabilities.c	(revision 750e2401955e422454d5fd5d94f2ba10e929fa8b)
++++ b/src/qemu/qemu_capabilities.c	(date 1636109137756)
+@@ -5397,12 +5397,12 @@
+         return NULL;
+ 
+     /* We would also want to check faccessat if we cared about ACLs,
+-     * but we don't.  */
++     * but we don't.
+     if (stat(binary, &sb) < 0) {
+         virReportSystemError(errno, _("Cannot check QEMU binary %s"),
+                              binary);
+         return NULL;
+-    }
++    }*/
+     qemuCaps->ctime = sb.st_ctime;
+ 
+     /* Make sure the binary we are about to try exec'ing exists.
